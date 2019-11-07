@@ -30,10 +30,10 @@ CREATE TABLE customer (
 CREATE TABLE flight (
   flight_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
   name VARCHAR(20) NOT NULL,
-  departure_time INT NOT NULL,
-  arrival_time INT NOT NULL,
+  departure_time BIGINT NOT NULL,
+  arrival_time BIGINT NOT NULL,
   start_point VARCHAR(20) NOT NULL,
-  end_point_point VARCHAR(20) NOT NULL,
+  end_point VARCHAR(20) NOT NULL,
   price INT NOT NULL,
   PRIMARY KEY  (flight_id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
