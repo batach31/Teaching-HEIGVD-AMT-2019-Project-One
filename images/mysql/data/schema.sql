@@ -18,7 +18,7 @@ CREATE TABLE customer (
   customer_pseudo VARCHAR(45) NOT NULL,
   firstname VARCHAR(20) NOT NULL,
   lastname VARCHAR(20) NOT NULL,
-  age BIGINT UNSIGNED NOT NULL,
+  age SMALLINT UNSIGNED NOT NULL,
   customer_pw VARCHAR(45) NOT NULL,
   PRIMARY KEY  (customer_id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
