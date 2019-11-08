@@ -166,7 +166,7 @@
                 <datasource jta="true" jndi-name="java:/jdbc/FlightCompany" pool-name="FlightCompanyDS" enabled="true" use-ccm="true">
                     <connection-url>jdbc:mysql://db:3306/FlightCompany?useSSL=false</connection-url>
                     <driver-class>com.mysql.jdbc.Driver</driver-class>
-                    <driver>mysql-connector-java-5.1.39-bin.jar_com.mysql.jdbc.Driver_5_1</driver>
+                    <driver>mysql-connector-java-5.1.48-bin.jar_com.mysql.jdbc.Driver_5_1</driver>
                     <security>
                         <user-name>root</user-name>
                         <password>adminpw</password>

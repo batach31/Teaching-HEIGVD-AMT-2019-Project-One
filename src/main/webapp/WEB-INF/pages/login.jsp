@@ -45,6 +45,14 @@
             <div class="col-md-12"><input type="submit" class="btn mb-2 submit" value="Se connecter"></div>
         </div>
     </form>
+    <c:if test="${error != null}">
+        <hr>
+        ${error}
+    </c:if>
+</div>
+<div class="login-block">
+    <span>Vous souhaitez vous enregistrer?</span>
+    <a href="./register">Register</a>
 </div>
 </body>
 </html>

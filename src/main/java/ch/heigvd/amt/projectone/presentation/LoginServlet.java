@@ -1,17 +1,23 @@
-package main.java.ch.heigvd.amt.projectone.presentation;
+package ch.heigvd.amt.projectone.presentation;
 
+import ch.heigvd.amt.projectone.dao.CustomerManager;
+import ch.heigvd.amt.projectone.model.Customer;
+
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 
-@WebServlet(name="LoginServlet",urlPatterns = {"/login"})
-public class LoginServlet extends HttpServlet{
+@WebServlet(name = "LoginServlet", urlPatterns = {"/login"})
+public class LoginServlet extends HttpServlet {
 
-    //private User user;
+    @EJB
+    private CustomerManager customerManager;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -20,25 +26,23 @@ public class LoginServlet extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        /*String username = req.getParameter("username");
+        String username = req.getParameter("username");
         String password = req.getParameter("password");
 
         String error = "";
 
-        if (user.checkPassword(username, password)) {
-            errors = "Wrong username or password";
+        if (!customerManager.verifyPassword(username, password)) {
+            error = "Wrong username or password";
         }
 
-        if (errors.size() == 0) {
-            Character user = characterManager.getCharacterByUsername(username);
+        if (error.length() == 0) {
+            Customer customer = customerManager.getCustomerByPseudo(username);
             HttpSession session = req.getSession();
-            session.setAttribute("user", user);
+            session.setAttribute("user", customer);
             resp.sendRedirect(req.getContextPath() + "/home");
         } else {
-            req.setAttribute("errors", error);
+            req.setAttribute("error", error);
             req.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(req, resp);
         }
-    }*/
     }
-
 }

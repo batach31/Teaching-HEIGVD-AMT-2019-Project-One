@@ -1,8 +1,10 @@
-package main.java.ch.heigvd.amt.projectone.dao;
+package ch.heigvd.amt.projectone.dao;
 
-import main.java.ch.heigvd.amt.projectone.model.Customer;
+import ch.heigvd.amt.projectone.business.IAuthenticationService;
+import ch.heigvd.amt.projectone.model.Customer;
 
 import javax.annotation.Resource;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -16,7 +18,10 @@ public class CustomerManager
     @Resource(lookup = "java:/jdbc/FlightCompany")
     private DataSource dataSource;
 
-    public Customer getCustomer(long id)
+    @EJB
+    IAuthenticationService authenticationService;
+
+    public Customer getCustomerById(long id)
     {
         Customer customer = null;
         try {
@@ -65,7 +70,8 @@ public class CustomerManager
             sql.setString(2, firstname);
             sql.setString(3, lastname);
             sql.setInt(4, age);
-            sql.setString(5, passwd);
+            String password = authenticationService.hashPassword(passwd);
+            sql.setString(5, password);
 
             nbRow = sql.executeUpdate();
             connection.close();
@@ -137,27 +143,51 @@ public class CustomerManager
         return success;
     }
 
-    public Customer Connection(String pseudo, String passwd)
-    {
-        Customer customer = null;
+    public Customer getCustomerByPseudo(String pseudo){
+        try {
+            Connection connection = dataSource.getConnection();
+            PreparedStatement sql = connection.prepareStatement("SELECT * FROM customer WHERE customer_pseudo = ?");
+
+            sql.setObject(1, pseudo);
+
+            ResultSet result = sql.executeQuery();
+
+            result.next();
+
+            int id = result.getInt("customer_id");
+            String firstname = result.getString("firstname");
+            String lastname = result.getString("lastname");
+            int age = result.getInt("age");
+            String passwd = result.getString("customer_pw");
+
+            connection.close();
+
+            return new Customer(id, pseudo, firstname, lastname, age, passwd);
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        }
+        return null;
+    }
+
+    public boolean verifyPassword(String username, String password){
         try{
             Connection connection = dataSource.getConnection();
 
-            PreparedStatement sql = connection.prepareStatement("SELECT * FROM customer WHERE customer_pseudo = ? AND customer_pw = ?");
+            PreparedStatement sql = connection.prepareStatement("SELECT customer_pw FROM customer WHERE customer_pseudo = ?");
 
-            sql.setObject(1,pseudo);
-            sql.setObject(2,passwd);
+            sql.setObject(1,username);
 
             ResultSet result = sql.executeQuery();
             if(result.next())
             {
-                customer = getCustomer(result.getLong("customer_id"));
+                String pwHash = result.getString("password");
+                return authenticationService.checkPassword(password,pwHash);
             }
 
             connection.close();
         }catch(SQLException ex) {
             ex.printStackTrace();
         }
-        return customer;
+        return false;
     }
 }

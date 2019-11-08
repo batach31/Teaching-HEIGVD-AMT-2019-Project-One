@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="ProjectOneApp-1.0-SNAPSHOT.war">
+    <root id="archive" name="ProjectOneApp.war">
       <element id="artifact" artifact-name="Teaching-HEIGVD-AMT-2019-Project-One:war exploded" />
     </root>
   </artifact>
