@@ -42,9 +42,45 @@
             </div>
         </div>
         <div class="form-group row">
+            <div class="col-md-5">
+                <label for="password" class="col-form-label">Verification Mot de passe</label>
+            </div>
+            <div class="col-md-6">
+                <input type="password" name="passwordVerify" id="passwordVerify" class="form-control" placeholder="Mot de passe">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-5">
+                <label for="login" class="col-form-label">Nom</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="nom" id="nom" class="form-control" placeholder="Nom">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-5">
+                <label for="login" class="col-form-label">Prenom</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="prenom" id="prenom" class="form-control" placeholder="Prenom">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-5">
+                <label for="login" class="col-form-label">Age</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="age" id="age" class="form-control" placeholder="Age">
+            </div>
+        </div>
+        <div class="form-group row">
             <div class="col-md-12"><input type="submit" class="btn mb-2 submit" value="S'enregistrer"></div>
         </div>
     </form>
+    <c:if test="${error != null}">
+        <hr>
+        ${error}
+    </c:if>
 </div>
 
 </body>
