@@ -1,10 +1,8 @@
 package ch.heigvd.amt.projectone.model;
 
-import lombok.Builder;
 import lombok.Getter;
 
 @Getter
-@Builder
 public class Customer
 {
     private long customer_id;
@@ -14,4 +12,12 @@ public class Customer
     private int age;
     private String customer_pw;
 
+    public Customer(long customer_id, String customer_pseudo, String firstname, String lastname, int age, String customer_pw) {
+        this.customer_id = customer_id;
+        this.customer_pseudo = customer_pseudo;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+        this.customer_pw = customer_pw;
+    }
 }

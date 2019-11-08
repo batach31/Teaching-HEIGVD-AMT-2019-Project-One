@@ -1,6 +1,6 @@
-package main.java.ch.heigvd.amt.projectone.dao;
+package ch.heigvd.amt.projectone.dao;
 
-import main.java.ch.heigvd.amt.projectone.model.Flight;
+import ch.heigvd.amt.projectone.model.Flight;
 
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
@@ -39,8 +39,6 @@ public class FlightManager
 
                 //To create timestamp convert, peut etre proposé deux getter dans le model ??
                 flight = new Flight(id, name, departureTime, arrivalTime, startPoint, endPoint, price);
-
-
 
             }
             connection.close();

@@ -1,6 +1,6 @@
-package main.java.ch.heigvd.amt.projectone.dao;
+package ch.heigvd.amt.projectone.dao;
 
-import main.java.ch.heigvd.amt.projectone.model.Customer;
+import ch.heigvd.amt.projectone.model.Customer;
 
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
