@@ -7,16 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72c8f81a-950b-4808-8066-a8efa2fba34f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/images/mysql/data/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/images/mysql/data/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/phpmyadmin/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/images/phpmyadmin/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/wildfly/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/images/wildfly/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/wildfly/ProjectOneApp.war" beforeDir="false" afterPath="$PROJECT_DIR$/images/wildfly/ProjectOneApp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/wildfly/standalone.xml" beforeDir="false" afterPath="$PROJECT_DIR$/images/wildfly/standalone.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/dao/CustomerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/dao/CustomerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -215,7 +206,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="608" />
     <option name="y" value="14" />
     <option name="width" value="697" />
@@ -423,10 +414,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55894000" />
+    <option name="totallyTimeSpent" value="56500000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2322239" />
