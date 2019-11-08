@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Teaching-HEIGVD-AMT-2019-Project-One" target="1.7" />
+      <module name="Teaching-HEIGVD-AMT-2019-Project-One" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

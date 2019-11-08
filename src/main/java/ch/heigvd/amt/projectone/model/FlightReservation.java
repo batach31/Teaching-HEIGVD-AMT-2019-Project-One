@@ -1,7 +1,12 @@
-package main.java.ch.heigvd.amt.projectone.model;
+package ch.heigvd.amt.projectone.model;
 
 import java.util.List;
 
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
 public class FlightReservation
 {
     private Flight flight;
