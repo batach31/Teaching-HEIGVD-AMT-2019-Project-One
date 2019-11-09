@@ -38,7 +38,7 @@ public class LoginServlet extends HttpServlet {
         if (error.length() == 0) {
             Customer customer = customerManager.getCustomerByPseudo(username);
             HttpSession session = req.getSession();
-            session.setAttribute("user", customer);
+            session.setAttribute("customer", customer);
             resp.sendRedirect(req.getContextPath() + "/home");
         } else {
             req.setAttribute("error", error);

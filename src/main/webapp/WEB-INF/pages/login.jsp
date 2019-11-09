@@ -16,7 +16,6 @@
     <link href="./assets/css/bootstrap.css" rel="stylesheet">
     <link href="./style/app.css" rel="stylesheet">
     <link href="./style/login.css" rel="stylesheet">
-    <link href="" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
@@ -52,7 +51,7 @@
 </div>
 <div class="login-block">
     <span>Vous souhaitez vous enregistrer?</span>
-    <a href="./register">Register</a>
+    <a href="./register">Cliquez ici</a>
 </div>
 </body>
 </html>
