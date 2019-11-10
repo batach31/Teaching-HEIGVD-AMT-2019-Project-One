@@ -1,6 +1,6 @@
 #! /bin/bash
 ## customer_id,customer_pseudo,firstname,lastname,age,customer_pw"
-echo "" > customer.csv
+echo "customer_id,customer_pseudo,firstname,lastname,age,customer_pw" > customer.csv
 for i in {1..100000}
 do
 	passwd=`cat /dev/urandom | tr -dc 'a-zA-Z0-9!?^' | fold -w 8 | head -n 1`
