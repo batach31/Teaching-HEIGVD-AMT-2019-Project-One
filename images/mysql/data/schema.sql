@@ -32,8 +32,8 @@ CREATE TABLE flight (
   name VARCHAR(20) NOT NULL,
   departure_time BIGINT UNSIGNED NOT NULL,
   arrival_time BIGINT UNSIGNED NOT NULL,
-  start_point VARCHAR(20) NOT NULL,
-  end_point VARCHAR(20) NOT NULL,
+  start_point VARCHAR(30) NOT NULL,
+  end_point VARCHAR(30) NOT NULL,
   price INT NOT NULL,
   PRIMARY KEY  (flight_id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
