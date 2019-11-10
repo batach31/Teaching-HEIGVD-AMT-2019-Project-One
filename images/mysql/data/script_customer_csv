@@ -1,0 +1,12 @@
+#! /bin/bash
+## customer_id,customer_pseudo,firstname,lastname,age,customer_pw"
+echo "" > customer.csv
+for i in {1..100000}
+do
+	passwd=`cat /dev/urandom | tr -dc 'a-zA-Z0-9!?^' | fold -w 8 | head -n 1`
+	##Caps_pseudo=`cat /dev/urandom | tr -dc 'A-Z' | fold -w 1 | head -n 1`
+	pseudo=`cat /dev/urandom | tr -dc 'a-z' | fold -w $(((RANDOM&5)+3)) | head -n 1`
+	firstname=`shuf -n 1 first_names.all.txt`
+	lastname=`shuf -n 1 last_names.all.txt`
+	echo "$i,${pseudo^},${firstname^},${lastname^},$(((RANDOM&72)+18)),$passwd" >> customer.csv
+done

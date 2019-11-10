@@ -1,0 +1,12 @@
+#! /bin/bash
+## flight_id,name,departure_time,arrival_time,start_point,end_point,price"
+echo "" > flight3.csv
+for i in {800001..900000}
+do
+	name=`cat /dev/urandom | tr -dc 'A-Z' | fold -w 2 | head -n 1`
+	city1=`shuf -n 1 list_city.txt | tr -d "\r\n"`
+	city2=`shuf -n 1 list_city.txt | tr -d "\r\n"`
+	timestamp=$(((RANDOM&1609454700)+1514793600))
+	timestamp2=$(($timestamp+$(((RANDOM&72000)+3600))))
+	echo "$i,${name}$(((RANDOM&9999)+1)),$timestamp,$timestamp2,$city1,$city2,$(((RANDOM&2000)+50))" >> flight3.csv
+done
