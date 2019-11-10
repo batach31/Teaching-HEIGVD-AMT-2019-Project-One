@@ -60,7 +60,6 @@ public class CustomerManager
     public boolean createCustomer(String pseudo, String firstname, String lastname, int age, String passwd)
     {
         boolean success = false;
-        int nbRow;
         try{
             Connection connection = dataSource.getConnection();
 
@@ -73,18 +72,14 @@ public class CustomerManager
             String password = authenticationService.hashPassword(passwd);
             sql.setString(5, password);
 
-            nbRow = sql.executeUpdate();
+            success = sql.execute();
             connection.close();
-
-            if(nbRow > 0)//if row are created, return true
-            {
-                success = true;
-            }
         } catch(SQLException ex){
             ex.printStackTrace();
+        }finally {
+            return success;
         }
 
-        return success;
     }
 
     public boolean deleteCustomer(long id)
@@ -173,14 +168,14 @@ public class CustomerManager
         try{
             Connection connection = dataSource.getConnection();
 
-            PreparedStatement sql = connection.prepareStatement("SELECT customer_pw FROM customer WHERE customer_pseudo = ?");
+            PreparedStatement sql = connection.prepareStatement("SELECT * FROM customer WHERE customer_pseudo = ?");
 
             sql.setObject(1,username);
 
             ResultSet result = sql.executeQuery();
             if(result.next())
             {
-                String pwHash = result.getString("password");
+                String pwHash = result.getString("customer_pw");
                 return authenticationService.checkPassword(password,pwHash);
             }
 

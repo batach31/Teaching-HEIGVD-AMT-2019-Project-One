@@ -37,9 +37,9 @@ public class LoginServlet extends HttpServlet {
 
         if (error.length() == 0) {
             Customer customer = customerManager.getCustomerByPseudo(username);
-            HttpSession session = req.getSession();
+            HttpSession session = req.getSession(true);
             session.setAttribute("customer", customer);
-            resp.sendRedirect(req.getContextPath() + "/home");
+            resp.sendRedirect(req.getContextPath() + "/test");
         } else {
             req.setAttribute("error", error);
             req.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(req, resp);

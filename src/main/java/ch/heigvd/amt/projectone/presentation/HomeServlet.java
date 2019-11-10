@@ -63,7 +63,7 @@ public class HomeServlet extends HttpServlet{
             flights = flightManager.getFlightByDepartureAndDestination(departure,destination);
         }
 
-        resp.sendRedirect(req.getContextPath() + "/home/flights?pageNum=" + req.getParameter("currPage"));
+        resp.sendRedirect(req.getContextPath() + "/home/flights?page_no=" + req.getParameter("currPage"));
     }
 
 }
