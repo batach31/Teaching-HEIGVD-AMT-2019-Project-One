@@ -28,7 +28,7 @@ public class CustomerManager
             Connection connection = dataSource.getConnection();
 
             PreparedStatement sql = connection.prepareStatement("SELECT * FROM customer WHERE customer_id = ?");
-            sql.setObject(1, id);
+            sql.setLong(1, id);
 
             ResultSet result = sql.executeQuery();
 
