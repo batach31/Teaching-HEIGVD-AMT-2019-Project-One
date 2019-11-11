@@ -12,6 +12,6 @@
 </head>
 <body>
 <h2>Za Warudo</h2>
-<input type="text" name="username" value="Bonjour">
+<input type="text" name="username" name="username" value="Bonjour">
 </body>
 </html>

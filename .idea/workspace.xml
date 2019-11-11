@@ -8,13 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72c8f81a-950b-4808-8066-a8efa2fba34f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Teaching_HEIGVD_AMT_2019_Project_One_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Teaching_HEIGVD_AMT_2019_Project_One_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/wildfly/ProjectOneApp.war" beforeDir="false" afterPath="$PROJECT_DIR$/images/wildfly/ProjectOneApp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/wildfly/standalone.xml" beforeDir="false" afterPath="$PROJECT_DIR$/images/wildfly/standalone.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/dao/CustomerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/dao/CustomerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -95,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -113,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/TestServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="79" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
+            <state relative-caret-position="340">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,10 +181,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/RegisterServlet.java" />
         <option value="$PROJECT_DIR$/images/wildfly/standalone.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/SecurityFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/dao/CustomerManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/TestServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp" />
       </list>
     </option>
   </component>
@@ -424,7 +418,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65849000" />
+    <option name="totallyTimeSpent" value="66374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -675,13 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -694,11 +681,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ch/heigvd/amt/projectone/presentation/TestServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="79" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
         </state>
       </provider>
     </entry>
