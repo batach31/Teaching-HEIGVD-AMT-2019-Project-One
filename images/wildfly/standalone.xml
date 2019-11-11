@@ -502,7 +502,7 @@
                 </host>
             </server>
             <servlet-container name="default">
-                <jsp-config/>
+                <jsp-config development="true"/>
                 <websockets/>
             </servlet-container>
             <handlers>

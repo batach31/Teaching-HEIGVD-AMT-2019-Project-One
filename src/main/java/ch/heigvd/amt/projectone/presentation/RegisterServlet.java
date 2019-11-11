@@ -24,7 +24,7 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String error = null;
+        String error = "";
 
         String pseudo = req.getParameter("username");
         String password = req.getParameter("password");
@@ -40,16 +40,16 @@ public class RegisterServlet extends HttpServlet {
 
 
         if(!password.equals(passwordVerify)){
-            error += error == null ? "Vous avez entré deux mot de passe différents" : " et vous avez entré deux mot de passe différents";
+            error += error.length() == 0 ? "Vous avez entré deux mot de passe différents" : " et vous avez entré deux mot de passe différents";
         }
 
         if(customerManager.getCustomerByPseudo(pseudo) != null){
-            error += error == null ? "Ce pseudo est déjà utilisé" : " et ce pseudo est déjà pris";
+            error += error.length() == 0 ? "Ce pseudo est déjà utilisé" : " et ce pseudo est déjà pris";
         }
 
-        if(error == null){
+        if(error.length() == 0){
             if(!customerManager.createCustomer(pseudo,prenom,nom,age,password)){
-                error += error == null ? "Impossible de créer votre compte" : " et il y a une impossiblitié de créer votre compte";
+                error = "Impossible de créer votre compte";
                 req.setAttribute("error", error);
                 req.getRequestDispatcher("/WEB-INF/pages/register.jsp").forward(req, resp);
             }else {
