@@ -47,7 +47,7 @@ Nous avions l'intention d'implémenté 4 types de tests.
 ### JUnit
 
 Nous avons utilisé JUnit pour tester les models. Ce sont des tests simples pour vérifier le bon fonctionnement des classes.
-![image test JUnit](JUnit.png)
+![image test JUnit](./Junit.PNG)
 
 ### Archillian
 
