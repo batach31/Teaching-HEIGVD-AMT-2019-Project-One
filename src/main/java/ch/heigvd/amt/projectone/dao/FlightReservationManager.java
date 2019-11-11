@@ -14,7 +14,7 @@ public class FlightReservationManager
     @Resource(lookup = "java:/jdbc/FlightCompany")
     private DataSource dataSource;
 
-    public boolean makeReservation(FlightManager flightManager)
+    public boolean makeReservation(Flight flight, Customer customer)
     {
         boolean success = false;
         int nbRow;
@@ -23,8 +23,8 @@ public class FlightReservationManager
 
             PreparedStatement sql = connection.prepareStatement("INSERT INTO customer (customer_id, flight_id) VALUES (?,?)");
 
-            sql.setString(1, flightManager.get);
-            sql.setString(2, firstname);
+            sql.setLong(1, customer.getCustomer_id());
+            sql.setLong(2, flight.getFlight_id());
 
             nbRow = sql.executeUpdate();
             connection.close();
