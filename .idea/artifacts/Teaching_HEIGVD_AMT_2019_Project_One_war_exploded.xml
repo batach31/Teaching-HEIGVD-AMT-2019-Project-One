@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="Teaching-HEIGVD-AMT-2019-Project-One:war exploded">
-    <output-path>$PROJECT_DIR$/target</output-path>
+    <output-path>$PROJECT_DIR$/images/wildfly</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>

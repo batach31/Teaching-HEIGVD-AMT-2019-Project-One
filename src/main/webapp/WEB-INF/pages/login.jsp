@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +17,6 @@
     <link href="./assets/css/bootstrap.css" rel="stylesheet">
     <link href="./style/app.css" rel="stylesheet">
     <link href="./style/login.css" rel="stylesheet">
-    <link href="" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
@@ -52,7 +52,7 @@
 </div>
 <div class="login-block">
     <span>Vous souhaitez vous enregistrer?</span>
-    <a href="./register">Register</a>
+    <a href="./register">Cliquez ici</a>
 </div>
 </body>
 </html>
