@@ -1,8 +1,10 @@
 package ch.heigvd.amt.projectone.model;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class Customer
 {
     private long customer_id;
