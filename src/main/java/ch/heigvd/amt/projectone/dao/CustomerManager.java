@@ -23,12 +23,13 @@ public class CustomerManager
 
     public Customer getCustomerById(long id)
     {
+        Connection connection = null;
         Customer customer = null;
         try {
-            Connection connection = dataSource.getConnection();
+            connection = dataSource.getConnection();
 
             PreparedStatement sql = connection.prepareStatement("SELECT * FROM customer WHERE customer_id = ?");
-            sql.setLong(1, id);
+            sql.setObject(1, id);
 
             ResultSet result = sql.executeQuery();
 
@@ -47,6 +48,8 @@ public class CustomerManager
             connection.close();
         } catch(SQLException ex){
             ex.printStackTrace();
+        }finally {
+            endConnection(connection);
         }
 
         return customer;
@@ -60,8 +63,10 @@ public class CustomerManager
     public boolean createCustomer(String pseudo, String firstname, String lastname, int age, String passwd)
     {
         boolean success = false;
+        int nbRow;
+        Connection connection = null;
         try{
-            Connection connection = dataSource.getConnection();
+            connection = dataSource.getConnection();
 
             PreparedStatement sql = connection.prepareStatement("INSERT INTO customer (customer_pseudo, firstname, lastname, age, customer_pw) VALUES (?,?,?,?,?)");
 
@@ -72,14 +77,20 @@ public class CustomerManager
             String password = authenticationService.hashPassword(passwd);
             sql.setString(5, password);
 
-            success = sql.execute();
+            nbRow = sql.executeUpdate();
             connection.close();
+
+            if(nbRow > 0)//if row are created, return true
+            {
+                success = true;
+            }
         } catch(SQLException ex){
             ex.printStackTrace();
         }finally {
-            return success;
+            endConnection(connection);
         }
 
+        return success;
     }
 
     public boolean deleteCustomer(long id)
@@ -139,50 +150,72 @@ public class CustomerManager
     }
 
     public Customer getCustomerByPseudo(String pseudo){
+        Connection connection = null;
         try {
-            Connection connection = dataSource.getConnection();
+            connection = dataSource.getConnection();
             PreparedStatement sql = connection.prepareStatement("SELECT * FROM customer WHERE customer_pseudo = ?");
 
-            sql.setObject(1, pseudo);
+            sql.setString(1, pseudo);
 
             ResultSet result = sql.executeQuery();
 
-            result.next();
 
-            int id = result.getInt("customer_id");
-            String firstname = result.getString("firstname");
-            String lastname = result.getString("lastname");
-            int age = result.getInt("age");
-            String passwd = result.getString("customer_pw");
+            if(result.next()){
+                int id = result.getInt(1);
+                String firstname = result.getString(3);
+                String lastname = result.getString(4);
+                int age = result.getInt(5);
+                String passwd = result.getString(6);
 
-            connection.close();
+                connection.close();
 
-            return new Customer(id, pseudo, firstname, lastname, age, passwd);
+                return new Customer(id, pseudo, firstname, lastname, age, passwd);
+            }
+
+
         }catch (SQLException ex){
             ex.printStackTrace();
+        }finally {
+            endConnection(connection);
         }
         return null;
     }
 
     public boolean verifyPassword(String username, String password){
+        boolean success = false;
+        Connection connection = null;
         try{
-            Connection connection = dataSource.getConnection();
+            connection = dataSource.getConnection();
 
-            PreparedStatement sql = connection.prepareStatement("SELECT * FROM customer WHERE customer_pseudo = ?");
+            PreparedStatement sql = connection.prepareStatement("SELECT customer_pw FROM customer WHERE customer_pseudo = ?");
 
             sql.setObject(1,username);
 
             ResultSet result = sql.executeQuery();
-            if(result.next())
-            {
+
+            if(result.wasNull()){
+                return false;
+            } else {
+                result.next();
                 String pwHash = result.getString("customer_pw");
-                return authenticationService.checkPassword(password,pwHash);
+                success = authenticationService.checkPassword(password,pwHash);
             }
 
             connection.close();
         }catch(SQLException ex) {
             ex.printStackTrace();
+        }finally {
+            endConnection(connection);
         }
-        return false;
+        return success;
+    }
+
+
+    private void endConnection(Connection connection) {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
