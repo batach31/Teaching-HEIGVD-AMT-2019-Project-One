@@ -50,3 +50,9 @@ CREATE TABLE flightReservation (
   FOREIGN KEY (customer_id) REFERENCES customer (customer_id) ON DELETE RESTRICT ON UPDATE CASCADE,
   FOREIGN KEY (flight_id) REFERENCES flight (flight_id) ON DELETE RESTRICT ON UPDATE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+## Uncomment to load data
+#LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/customer.csv' INTO TABLE FlightCompany.customer FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+#LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/flight.csv' INTO TABLE FlightCompany.flight FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+#LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/flightReservation.csv' INTO TABLE FlightCompany.flightReservation FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';

@@ -36,6 +36,10 @@ Ainsi on a pu voir que le Filter fonctionne bien; c'est-à-dire qu'on ne peut ac
 En contrepartie, on ne peut donc pas accéder à la suite de l'application, ce qui fait qu'on n'a pas pu tester toutes les fonctionnalités de l'appli.
 Il peut donc subsister des bugs inconnus, certainement dans la partie pagination.
 
+Il faut aussi savoir que la base de donnée n'est pas remplie, pour cause de temps de chargement.
+Il suffit de décommenter les 3 dernières lignes du fichier /images/mysql/data/schema.sql
+
+
 ### Contraintes d'utilisation
 
 Bien s'enregistrer avant de se log, il peut y avoir des problèmes de stabilité côté serveur si l'on essaie de se logger avec un utilisateur inconnu.
