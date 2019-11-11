@@ -171,7 +171,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="608" />
     <option name="y" value="14" />
     <option name="width" value="697" />
@@ -194,127 +194,7 @@
             <path>
               <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
               <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="wildfly" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="wildfly" type="462c0819:PsiDirectoryNode" />
-              <item name="drivers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="projectone" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="projectone" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="projectone" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="projectone" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="projectone" type="462c0819:PsiDirectoryNode" />
-              <item name="presentation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Teaching-HEIGVD-AMT-2019-Project-One" type="b2602c69:ProjectViewProjectNode" />
@@ -373,11 +253,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57631000" />
+    <option name="totallyTimeSpent" value="58200000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2473525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
