@@ -5,6 +5,7 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
@@ -16,6 +17,18 @@ public class CustomerTest {
         return ShrinkWrap.create(JavaArchive.class)
                 .addClass(Customer.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
+
+    @Test
+    void itShouldBePossibleToCreateUsers() {
+        Customer Miguel = new Customer(1,"endmon", "Miguel", "Gouveia", 24, "passNohash");
+        assertNotNull(Miguel);
+        assertEquals("Miguel", Miguel.getFirstname());
+        assertEquals("endmon", Miguel.getCustomer_pseudo());
+        assertEquals("Gouveia", Miguel.getLastname());
+        assertEquals(24, Miguel.getAge());
+        assertEquals("passNohash", Miguel.getCustomer_pw());
+
     }
 
 }
