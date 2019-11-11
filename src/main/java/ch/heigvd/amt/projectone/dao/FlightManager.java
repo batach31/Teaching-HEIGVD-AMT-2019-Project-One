@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 @Stateless
 public class FlightManager
@@ -16,7 +17,7 @@ public class FlightManager
     @Resource(lookup = "java:/jdbc/FlightCompany")
     private DataSource dataSource;
 
-    public Flight getFlight(long id)
+    public Flight getFlightById(long id)
     {
         Flight flight = null;
         try {
@@ -47,6 +48,103 @@ public class FlightManager
         }
 
         return flight;
+    }
+
+    public List<Flight> getFlightByDeparture(String departure)
+    {
+        List<Flight> flights = null;
+        try {
+            Connection connection = dataSource.getConnection();
+
+            PreparedStatement sql = connection.prepareStatement("SELECT * FROM flight WHERE start_point = ?");
+            sql.setObject(1, departure);
+
+            ResultSet result = sql.executeQuery();
+
+            while(result.next())
+            {
+                int id = result.getInt("flight_id");
+                String name = result.getString("name");
+                long departureTime = result.getLong("departure_time");
+                long arrivalTime = result.getLong("arrival_time");
+                String endPoint = result.getString("end_point");
+                int price = result.getInt("price");
+
+                //To create timestamp convert, peut etre proposé deux getter dans le model ??
+                flights.add(new Flight(id, name, departureTime, arrivalTime, departure, endPoint, price));
+
+            }
+            connection.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+
+        return flights;
+    }
+
+    public List<Flight> getFlightByDestination(String destination)
+    {
+        List<Flight> flights = null;
+        try {
+            Connection connection = dataSource.getConnection();
+
+            PreparedStatement sql = connection.prepareStatement("SELECT * FROM flight WHERE end_point = ?");
+            sql.setObject(1, destination);
+
+            ResultSet result = sql.executeQuery();
+
+            while(result.next())
+            {
+                int id = result.getInt("flight_id");
+                String name = result.getString("name");
+                long departureTime = result.getLong("departure_time");
+                long arrivalTime = result.getLong("arrival_time");
+                String startPoint = result.getString("start_point");
+                int price = result.getInt("price");
+
+                //To create timestamp convert, peut etre proposé deux getter dans le model ??
+                flights.add(new Flight(id, name, departureTime, arrivalTime, startPoint, destination, price));
+
+            }
+            connection.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+
+        return flights;
+    }
+
+    public List<Flight> getFlightByDepartureAndDestination(String departure, String destination)
+    {
+        List<Flight> flights = null;
+        try {
+            Connection connection = dataSource.getConnection();
+
+            PreparedStatement sql = connection.prepareStatement("SELECT * FROM flight WHERE (start_point = ? AND end_point = ?)");
+            sql.setObject(1, departure);
+            sql.setObject(2, destination);
+
+
+            ResultSet result = sql.executeQuery();
+
+            while(result.next())
+            {
+                int id = result.getInt("flight_id");
+                String name = result.getString("name");
+                long departureTime = result.getLong("departure_time");
+                long arrivalTime = result.getLong("arrival_time");
+                int price = result.getInt("price");
+
+                //To create timestamp convert, peut etre proposé deux getter dans le model ??
+                flights.add(new Flight(id, name, departureTime, arrivalTime, departure, destination, price));
+
+            }
+            connection.close();
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
+
+        return flights;
     }
 
     public boolean createFlight(Flight flight)
