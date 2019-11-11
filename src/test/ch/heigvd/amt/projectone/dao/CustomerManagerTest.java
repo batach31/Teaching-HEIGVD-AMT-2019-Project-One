@@ -1,49 +1,23 @@
-package ch.heigvd.amt.projectone.dao;
+package heigvd.amt.projectone.dao;
 
-import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import ch.heigvd.amt.projectone.dao.CustomerManager;
+import ch.heigvd.amt.projectone.model.Customer;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-@RunWith(Arquillian.class)
 public class CustomerManagerTest {
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(CustomerManager.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
-    }
+
 
     @Test
-    public void getCustomerById() {
-    }
-
-    @Test
-    public void createCustomer() {
-    }
-
-    @Test
-    public void createCustomer1() {
-    }
-
-    @Test
-    public void deleteCustomer() {
-    }
-
-    @Test
-    public void updateCustomer() {
-    }
-
-    @Test
-    public void getCustomerByPseudo() {
-    }
-
-    @Test
-    public void verifyPassword() {
+    public void itShouldBePossibleToGenerateCustomerInDB()
+    {
+        Customer Miguel = new Customer(1, "Ydmon", "Miguel", "Gouveia", 24, "pass123");
+        CustomerManager customerManager = new CustomerManager();
+        customerManager.createCustomer(Miguel);
+        Customer test = customerManager.getCustomerByPseudo("Ydmon");
+        assertNotNull(test);
+        assertEquals(test.getFirstname(), Miguel.getFirstname());
     }
 }

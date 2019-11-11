@@ -92,9 +92,10 @@ public class FlightReservationManager
         return flights;
     }
 
-    public List<Customer> listCustomer(Flight flight)
+    public FlightReservation Reservation(Flight flight)
     {
         List<Customer> customers = new ArrayList<Customer>();
+        FlightReservation reservation;
         try{
             Connection connection = dataSource.getConnection();
 
@@ -108,11 +109,13 @@ public class FlightReservationManager
                         result.getString("firstname"),result.getString("lastname"),
                         result.getInt("age"), result.getString("customer_pw")));
             }
+
             connection.close();
 
         }catch(SQLException ex) {
             ex.printStackTrace();
         }
-        return customers;
+        reservation = new FlightReservation(flight, customers);
+        return reservation;
     }
 }

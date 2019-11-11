@@ -1,21 +1,23 @@
-package ch.heigvd.amt.projectone.model;
+package heigvd.amt.projectone.model;
 
-import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
-import org.junit.runner.RunWith;
+import ch.heigvd.amt.projectone.model.Flight;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-@RunWith(Arquillian.class)
+
 public class FlightTest {
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(Flight.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+
+    @Test
+    public void itShouldBePossibleToCreateFlight() {
+        Flight Airbus = new Flight(1,"AF1234",1573484400 , 1573743600, "Bale", "Paris", 535);
+        assertNotNull(Airbus);
+        assertEquals("AF1234", Airbus.getName());
+        assertEquals(1573484400, Airbus.getDepartureTime());
+        assertEquals(1573743600, Airbus.getArrivalTime());
+        assertEquals("Bale", Airbus.getStartPoint());
+        assertEquals("Paris", Airbus.getEndPoint());
+        assertEquals(535, Airbus.getPrice());
     }
 
 }

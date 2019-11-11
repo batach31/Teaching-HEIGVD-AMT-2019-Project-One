@@ -1,21 +1,23 @@
-package ch.heigvd.amt.projectone.model;
+package heigvd.amt.projectone.model;
 
-import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
-import org.junit.runner.RunWith;
+
+import ch.heigvd.amt.projectone.model.Flight;
+import ch.heigvd.amt.projectone.model.FlightReservation;
+import ch.heigvd.amt.projectone.model.Customer;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
-@RunWith(Arquillian.class)
 public class FlightReservationTest {
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(FlightReservation.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+
+    @Test
+    public void itShouldBePossibleToCreateFlightReservation() {
+        List<Customer> customers = new ArrayList<>();
+        FlightReservation flightReservation = new FlightReservation(new Flight(1,"",1,1,"","",1),customers);
+        assertNotNull(flightReservation);
     }
 
 }
